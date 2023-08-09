@@ -26,7 +26,14 @@ function init() {
         {
             type: 'input',
             message: 'Please enter text for your logo (maximum of 3 characters).',
-            name: 'textInput'
+            name: 'textInput',
+            validate: function (input) {
+                if (input.length <= 3) {
+                    return true;
+                } else {
+                    return 'Text has a maximum of 3 characters. Please try again.';
+                }
+            }
         },
         {
             type: 'input',
