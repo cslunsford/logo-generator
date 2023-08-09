@@ -50,9 +50,11 @@ function init() {
         } else if (data.shapeChoice === 'Square') {
             logo = new Square();
         }
-        logo.setColor(data.shapeColorChoice).toLowerCase();
+        const shapeColorChoice = data.shapeColorChoice.toLowerCase();
+        logo.setColor(shapeColorChoice);
         logo.setText(data.textInput);
-        logo.setTextColor(data.textColorChoice).toLowerCase();
+        const textColorChoice = data.textColorChoice.toLowerCase();
+        logo.setTextColor(textColorChoice);
         const renderedLogo = logo.render();
         const logoFilesPath = path.join(examples, 'logo.svg');
         writeToFile(logoFilesPath, renderedLogo);
