@@ -15,7 +15,7 @@ function init() {
         {
             type: 'list',
             message: 'Please select a shape for your logo.',
-            choices: ['Trianlge', 'Circle', 'Square'],
+            choices: ['Triangle', 'Circle', 'Square'],
             name: 'shapeChoice'
         },
         {
