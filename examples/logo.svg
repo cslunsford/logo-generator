@@ -1,1 +1,1 @@
-<circle cx="150" cy="100" r="100" fill="Green" />
+<svg width="300" height="200"> <circle cx="150" cy="100" r="100" fill="green" /> <text x="150" y="100" fill="white" font-size="20" text-anchor="middle">CSL</text> </svg>

@@ -37,13 +37,15 @@ function init() {
     .then((data) => {
         let logo = '';
         if (data.shapeChoice === 'Triangle') {
-            logo = new Triangle(data.textInput, data.textColorChoice);
+            logo = new Triangle();
         } else if (data.shapeChoice === 'Circle') {
-            logo = new Circle(data.textInput, data.textColorChoice);
+            logo = new Circle();
         } else if (data.shapeChoice === 'Square') {
-            logo = new Square(data.textInput, data.textColorChoice);
+            logo = new Square();
         }
         logo.setColor(data.shapeColorChoice);
+        logo.setText(data.textInput);
+        logo.setTextColor(data.textColorChoice);
         const renderedLogo = logo.render();
         const logoFilesPath = path.join(examples, 'logo.svg');
         writeToFile(logoFilesPath, renderedLogo);
